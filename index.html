@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <script src="functions.js"></script>
+  </head>
+  <body>
+    <h1>
+      Título
+      <strong>ola</strong>
+    </h1>
+  </body>
+  <script>
+    //HOISTING
+    // console.log('existe x antes do bloco? ', x)
+    // {
+    //   var x = 0
+    // }
+
+    // console.log('existe x depois do bloco? ', x)
+
+    // let name, age
+    // name = 'Well'
+    // age = 28
+
+    // //concatenando valores
+    // console.log('O ' + name + ' tem ' + age + ' anos.')
+
+    // //interpolando valores com template literals or template string
+    // console.log(`O ${name} tem ${age} anos.`)
+    // ---------------------------------------------------------------------------------------------------//
+
+    // 1. Declare uma variável de nome weight
+    // let weight
+
+    //2. Que tipo de dado é a variável acima?
+    // console.log(typeof weight) //undefined
+
+    //3. Declare variáveis e atribua os seguintes dados: name: String, age: Number(Integer), weight: Number(float), isSubscribed:Boolean
+    // let name = 'Well'
+    // let age = 28
+    // let weight = 79.85
+    // let isSubscribed = true
+
+    //4. A variável student abaixo é de que tipo de dados?
+    // let student = {}
+    // variavel student é do tipo object
+
+    //4.1. Atribua a ela as mesmas propriedades do exercicio 3
+    // let student = {
+    //   name: 'Well',
+    //   age: 28,
+    //   weight: 79.85,
+    //   isSubscribed: true
+    // }
+
+    //4.2. Mostre no console a seguinte mensagem: <name> de idade <age> pesa <weight> kg, substituindo pelas propriedades do objeto.
+    // console.log(
+    //   `${student.name} de idade ${student.age} pesa ${student.weight} kg.`
+    // )
+
+    //5. Declare uma variável do tipo Array de nome students e atribua a ela nenhum valor, ou seja, somente o Array vazio:
+    // let students = []
+
+    //6. Reatribua valor para a variável acima, colocando dentro dela o objeto student da questão 4. (Não copiar e colar o objeto, mas usar o objeto criado e inserir ele no Array)
+    // students = [student]
+
+    //7. Coloque no console o valor da posição zero do Array acima
+    // console.log(students[0])
+
+    //8. Crie um novo student e coloque na posição 1 do Array students
+    // // let student1 = {
+    //   name: 'Mayk',
+    //   age: 35,
+    //   weight: 75.85,
+    //   isSubscribed: false
+    // }
+
+    // students[1] = student1
+    // //exiba a posição 1 do Array
+    // console.log(students[1])
+
+    // /*9. Sem rodar o cógido abaixo, responda qual é o retorno do código e por quê? */
+
+    // console.log(a)
+    // var a = 1
+
+    //resposta do código será undefined, pois o var é global, portanto acontecerá o hoisting e a declaração do a será elevada. Como a atribuição acontecerá somente depois da chamada da função console.log(), a resposta é undefined
+  </script>
+</html>
