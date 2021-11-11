@@ -1,197 +1,129 @@
-/*
-  new
+// if .. else
 
-  * left-hand-side expression
-  * criar um novo objeto
-*/
+let temperature = 36.9
+let highTemperature = temperature >= 37.5
+let mediumTemperature = temperature < 35.5 && temperature >= 37
 
-let name = new String('Well')
-name.surName = 'Nogueira'
-let age = new Number(28)
-let date = new Date('2020-12-01')
-console.log(name.surName, age, date)
-
-/*
-  Operadores unários
-  typeof
-  delete
-*/
-
-const person = {
-  name: 'Wellington',
-  age: 28
+if (highTemperature) {
+  console.log('Febre alta')
+} else if (mediumTemperature) {
+  console.log('Febre moderada')
+} else {
+  console.log('Saudável')
 }
 
-delete person.age // delete serve pra deletar uma PROPRIEDADE de um objeto
-console.log(person)
+// switch
 
-// Operadores Aritméticos
+function calculate(number1, operator, number2) {
+  let result = 0
 
-// multiplicação
-console.log(3 * 5)
+  switch (operator) {
+    case '+':
+      result = number1 + number2
+      break
+    case '-':
+      result = number1 - number2
+      break
+    case '*':
+      result = number1 * number2
+      break
+    case '/':
+      result = number1 / number2
+      break
+    default:
+      console.log('não implementado')
+  }
 
-//divisão
-console.log(12 / 2)
+  return result
+}
 
-//soma
-console.log(5 + 8)
+console.log(calculate(5, '/', 9))
 
-//subtração
-console.log(10 - 5)
+//throw... try catch
+//utilizado pra capturar erros que a aplicação possa ter e não comprometer o funcionamento do restante do código
 
-// resto da divisão
-let remainder
-remainder = 11 % 3
-console.log(remainder)
+function sayMyName(name = '') {
+  if (name === '') {
+    throw 'Nome é obrigatório' //se o parâmetro name for vazio, essa mensagem de erro deverá ser disparada. Pode ser somente uma mensagem, a instância de um Obj do tipo Erro e etc
+  }
 
-//incremento
-let increment = 0
-increment++
-console.log(increment) // no console logo só incrementa se eu usar antes da variável ++increment
+  console.log()
+}
 
-//decremento
-let decrement = 0
-decrement--
-console.log(decrement)
+try {
+  // tenta executar a função
+  sayMyName()
+} catch (e) {
+  //caso tenha algum erro, ele é capturado pelo parâmetro e e exibido no console
+  console.log(e)
+}
 
-//exponencial **
-console.log(3 ** 3)
+console.log('após o try/catch, a aplicação continua')
 
-//Operadores de comparação
+//Estrutura de repetição
+//for
+//break - interrompe a execução do loop
+//continue - pula a execução do momento
 
-//Irá comparar valores e retornar um Boolean como resposta à comparação
+// for (let i = 1; i <= 10; i++) {
+//   console.log(i)
+// }
 
-let one = 1
-let two = 2
+// for (let i = 1; i <= 10; i++) {
+//   if (i === 5) {
+//     break // interrompe nesse momento e não executa mais
+//   }
+//   console.log(i)
+// }
 
-// == igual a
-console.log(two == 1) // false
-console.log(one == '1') //true
+for (let i = 1; i <= 10; i++) {
+  if (i === 5) {
+    continue // pula uma interação, conforme condição do if, e continua na próxima
+  }
+  console.log(i)
+}
 
-// != diferente de
-console.log(one != two) // true
-console.log(one != 1) //false
-console.log(one != '1') //false
+//Estutura de repetição
+//while
 
-// Comparação de valor e tipo de dado
+let i = 0
+while (i < 10) {
+  console.log(i)
+  i++
+}
+// utilizamos o while quando não sabemos o ponto de parada. Ex:
+let j = 65465484654
+while (j > 10) {
+  console.log(j)
+  j /= 35
+}
 
-// === estritamente igual a
-console.log(one === '1') //false
-console.log(one === 1) // true
+//for of
+// essa estrutura permite usar um loop para fazer as iterações dependendo do tamanho do tipo de dado utilizado
 
-// !== estritamente diferente de
-console.log(two !== '2') //true
-console.log(two !== 2) //false
+let name = 'Wellington'
+let names = ['João', 'Pedro', 'Paulo']
 
-// > Maior que
-console.log(one > two) //false
+for (let char of name) {
+  // nesse caso, o loop vai rodar em quanto houver caracteres na variável name que é do tipo string. Cada caractere vai ser atribuido pra variável char e impresso no console
+  console.log(char)
+}
 
-// >= Maior igual a
-console.log(one >= 1) //true
-console.log(two >= 1) //true
+for (let name of names) {
+  // já nesse caso, o loop vai rodar em quanto houverem posições no array names. Cada posição vai ser atribuida pra variável name e impressa no console
+  console.log(name)
+}
 
-// < Menor que
-console.log(one < two) //true
+//for in
+// cria um loop utilizando um objeto pra pegar suas propriedades
 
-// <= Menor igual a
-console.log(one <= two) // true
-console.log(one <= 1) //true
-console.log(one <= 0) //false
+let person = {
+  name: 'Jhon',
+  age: 28,
+  weigth: 80
+}
 
-//Operadores de Atribuição (Assignment)
-let x
-
-// assignment
-x = 1
-console.log(x)
-
-//adition assignment
-// x = x + 2
-x += 2
-console.log(x)
-
-// subtraction assignment
-// x = x -1
-x -= 1
-console.log(x)
-
-// multiplications assignment
-// x = x * 2
-x *= 2
-console.log(x)
-
-//division assignment
-// x = x / 2
-x /= 2
-console.log(x)
-
-//remainder, exponetiation
-// x %= 2
-x ** 2
-console.log(x)
-
-//Operadores lógicos (logical operators)
-
-// -2 valores booleanos, quando verificados, resultará em verdadeiro ou falso
-
-let pao = true
-let queijo = true
-
-// AND &&
-console.log(pao && queijo) //true
-
-// OR ||
-console.log(pao || queijo) //true
-
-// NOT !
-console.log(!pao) //false
-
-//Operador condicional ternário
-//Condição então valor 1 senão valor2
-// condition ? value1 : value2
-
-//Exemplos
-//Café da manhã top
-let leite = false
-let frutas = false
-
-const niceBreakFast = leite || frutas ? 'Café da manhã topp' : 'Café ruim'
-console.log(niceBreakFast)
-
-// Maior que 18
-let idade = 17
-const canDrive = idade >= 18 ? 'can Drive' : "cant't drive"
-console.log(canDrive)
-
-/* 
-  FALSY
-  Quando um valor é considerado false em contextos onde um booleano é
-  obrigatório (condicionais e loops)
-
-  false
-  0
-  -0
-  ""
-  null
-  undefined
-  NaN
-*/
-console.log(0 ? 'true' : 'false')
-
-/* 
-  TRUTHY
-  Quando um valor é considerado true em contextos onde um booleano é
-  obrigatório (condicionais e loops)
-
-  true
-  {}
-  []
-  1
-  3.23
-  "0" string nao vazia
-  "false"
-  -1
-  Infinity
-  -Infinity
-*/
-console.log({} ? 'verdadeiro' : 'FALSO')
+for (let property in person) {
+  console.log(property) // exige o nome da propriedade
+  console.log(person[property]) // exibe o valor da propriedade que está sendo pegada no momento pela variável property
+}
