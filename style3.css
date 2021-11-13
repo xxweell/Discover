@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+}
+
+div,
+section {
+  border: 1px solid green;
+  width: 100px;
+  height: 100px;
+
+  margin: 10px auto; /*faz um cálculo automático de margin somente para as laterais do elemento*/
+}
+
+/* div {
+  margin-bottom: 8px; margin collapsing 
+}
+
+section {
+  margin-top: 8px; margin collapsing 
+} */

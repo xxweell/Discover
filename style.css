@@ -1,17 +1,16 @@
-/* Box Sizing
-  De forma padrão, o CSS considera o conteúdo pra fazer os cálculos. Pra facilitar, queremos que os cálculos sejam feitos a partir da borda dos elementos.
-*/
-
-/*Usualmente, o que os devs fazem é já formatar, de forma global, para que todo o CSS se comporte como box-sizing: border-box*/
 * {
-  box-sizing: border-box;
+  margin: 0;
 }
-div {
+
+div,
+section {
   width: 100px;
   height: 100px;
-  border: 1px solid red;
-  margin: 10%;
-  padding: 0 20px;
+  margin: 20% auto;
 
-  box-sizing: border-box; /* adicionando a propriedade box-sizing: border box, alteramos o comportamento do CSS, utilizando a borda do elemento com base para aplicar outras propriedades*/
+  border: 20px red solid; /* O valor do border é somado a altura e a largura. Para retirar esse comportamento, precisamos do box-sizing: border-box*/
+  border-top: groove green 4px;
+  border-bottom: none;
+
+  outline: yellow 4px solid;
 }

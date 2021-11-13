@@ -1,0 +1,12 @@
+div {
+  height: 100px;
+  border: 1px solid red;
+  width: 10px;
+}
+
+span {
+  height: 100px; /*A propriedade não faz efeito por tratar-se de um elemento do tipo inline*/
+  border: 1px solid green;
+  width: 10px; /*A propriedade não faz efeito por tratar-se de um elemento do tipo inline*/
+  display: block; /*Posso alterar o display para que ai sim as propriedades sejam aplicadas*/
+}
