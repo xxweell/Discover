@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Email</title>
+</head>
+<body>
+    <!--
+        <input type="email">
+
+        - Espera que o usuário digite um email
+        - Irá validar se o valor digitado é um email
+
+        # Atributos
+
+        - placeholder
+        - readonly / disabled
+        - value
+
+        -required
+
+        -multiple
+            * O campo irá receber 1 ou mais emails, separados por vírgula
+
+        - minlength / maxlength
+            * O mínimo e/ou máximo valor que o campo irá conter
+
+        - size
+            * Valor numérico indicando quantos carecteres esse campo deveria conter, modificando visualmente o tamanho do input para o usuário
+
+        - pattern
+            * Uso de expressão regular para validar o campo
+            * exemplo: o usuário so poderá colocar email do domínio rocketseat.com.br:
+                * pattern=".+@rocketseat\.com\.br" sendo que: . siginifica qualquer caracter, + uma ou mais vezes(pode se repetir) e o \ pra dizer que é um . literalmente
+
+        -list
+            * o id de uma tag <datalist> que está no mesmo documento
+            * <datalist> irá conter uma lista de valores pré definidos a fim de sugerir ao usuário quais valores estão disponíveis
+                    * Os valores do <datalist> que não forem compatíveis com o campo não será apresentados como sugestão
+    -->
+    <form action="">
+        <datalist id="emaillist">
+            <option>well@rocketseat.com.br</option>
+        </datalist>
+        <input type="email"
+            pattern=".+@rocketseat\.com\.br"
+            title="Somente serão aceitos emails do domínio rocketseat.com.br"
+            list="emaillist"
+        >
+        <button>Enviar</button>
+    </form>
+    
+</body>
+</html>
