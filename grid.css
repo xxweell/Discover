@@ -1,0 +1,48 @@
+/*
+    * Posicionamento dos elementos dentro da caixa
+    * Posicionamento horizontal e vertical ao mesmo tempo
+    * Pode ser flexível ou fixo
+    * Cria espaços para os elementos filhos habitarem
+*/
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    color: whitesmoke;
+
+    grid-template-areas: /* a quantidade de "" define o número de linhas */
+    "header header" /* dentro de cada linha, difine-se as colunas */
+    "main aside"
+    "footer footer";
+
+    grid-template-rows: 30px 1fr 40px; /* define o tamanho das 3 linhas do grid, sendo que fr significa fração (flexivel) */
+    grid-template-columns: 1fr 80px; /* define o tamnho das colunas */
+}
+
+header {
+    grid-area: header; /* define a coluna que o elemento header vai ocupar */
+    background-color: green;
+
+    /* usando o display flex pra trabalhar com os elementos filhos do header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8px;
+}
+
+main {
+    grid-area: main;
+    background-color: red;
+}
+
+aside {
+    grid-area: aside;
+    background-color: blue;
+}
+
+footer {
+    grid-area: footer;
+    background-color: grey;
+}
