@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+<body>
+    <!--
+        <input type="search" />
+
+        - Campo de busca
+        - É igual ao campo do tipo "text" mas poderá ser um pouco diferente dependendo do user agent (navegador)
+
+        # Atributos
+        - list / <datalist>
+        - pattern
+        - aria-label
+    -->
+
+    <datalist id="searchitems">
+        <option>mac</option>
+        <option>Win</option>
+        <option>Linux</option>
+    </datalist>
+
+    <form action="">
+        <input type="search"
+        name="q"
+        list="searchitems"
+        placeholder="Digite seu termo de busca"
+        size="29"
+        aria-label="Campo de pesquisa: Digite seu termo de busca">
+        <button>Pesquisar</button>
+    </form>
+
+    <!-- utilizando pattern com expressão regular pra engessar a forma como a pesquisa será realizada -->
+    <form action="">
+        <label for="">Pesquisar pelo ID</label>
+        <input type="search"
+        name="id"
+        title="Digite o número do ID no seguinte formato: 99"
+        pattern="[0-9]{2}"
+        size="5">
+        <button>Pesquisar</button>
+    </form>
+</body>
+</html>

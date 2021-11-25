@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input URL</title>
+</head>
+<body>
+    <!--
+        <input type="url">
+
+        - Espera que o usuário digite uma url
+        - Irá validar se o valor digitado é uma url
+
+        # Atributos
+
+        - placeholder
+        - readonly / disabled
+        - value
+
+        -required
+
+        -multiple
+            * O campo irá receber 1 ou mais emails, separados por vírgula
+
+        - minlength / maxlength
+            * O mínimo e/ou máximo valor que o campo irá conter
+
+        - size
+            * Valor numérico indicando quantos carecteres esse campo deveria conter, modificando visualmente o tamanho do input para o usuário
+
+        - pattern
+            * Uso de expressão regular para validar o campo
+            * exemplo: o usuário so poderá colocar o domínio .com.br:
+                * pattern=".*\.com\.br.*" sendo que: . siginifica qualquer caracter, + uma ou mais vezes(pode se repetir) e o \ pra dizer que é um . literalmente
+
+        -list
+            * o id de uma tag <datalist> que está no mesmo documento
+            * <datalist> irá conter uma lista de valores pré definidos a fim de sugerir ao usuário quais valores estão disponíveis
+                    * Os valores do <datalist> que não forem compatíveis com o campo não será apresentados como sugestão
+
+        - spelcheck
+            * habilitar a verificação ortográfica para este input
+    -->
+    <form action="">
+        <datalist id="urlsdata">
+            <option>http://meusite.com.br</option>
+            <option>http://seusite.com.br</option>
+        </datalist>
+        <input type="url"
+            placeholder="http://example.com.br"
+            pattern=".*\.com\.br.*"
+            title="Somente serão aceitos domínios .com.br"
+            required
+            list="urlsdata"
+        >
+        <button>Enviar</button>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select</title>
+</head>
+<body>
+    <!--
+        <select>
+
+        - Controle que fornece o menu de opções
+
+        <option>
+
+        - Contém as opções a serem selecionadas
+        - Atributos necessários
+            - value
+
+        ATRIBUTOS ÚNICOS
+        - multiple
+            * Habilita múltiplas opções
+        - size
+            * Quantas opções visíveis
+
+    -->
+    <label for="carselect">Qual o modelo do carro</label>
+    <select name="carmodel" id="carselect">
+        <option value="">Selecione o modelo</option>
+        <option value="fiat">Uno</option>
+        <option value="audi">A3</option>
+    </select>
+    <!-- O valor do campo otion que for selecionado fica guardado no name do select. No backend seria: carmodel=fiat -->
+
+    <!-- <select> como múltiplas opções -->
+        <label for="fruitselect">Qual fruta você prefere</label>
+        <select name="fruit" id="fruitselect" multiple size="2">
+            <option value="apple">Apple</option>
+            <option value="orange">Orange</option>
+            <option value="lemon">Lemon</option>
+            <option value="grape">Grape</option>
+        </select>
+</body>
+</html>
