@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+}
+
+header {
+  padding: 4rem;
+  background: lightgray;
+}
+
+nav {
+  display: flex;
+
+  justify-content: space-between; /* alinha o elemento a e o elemento ul um ao lado do outro */
+  align-items: center;
+}
+
+ul {
+  display: flex; /* pra trabalhar com os elementos um ao lado do outro */
+  list-style: none;
+  align-items: center; /* alinhar os items da lista ao centro do eixo x*/
+  gap: 0.8rem; /* espaço entre os elementos da lista */
+}
+
+ul li:last-child {
+  background: black;
+  color: white;
+  padding: 0.8rem;
+}
