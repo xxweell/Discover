@@ -118,6 +118,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
 ## -- Alinhando planetas
 
 # Layouts e evolução
+
 Layout tem a ver com a maneira que os elementos estão distribuídos na tela
 
 ## Normal flow
@@ -129,18 +130,19 @@ Ou flow Layout é maneira que os elementos `block` e `inline` ficam na página
 ```
 
 ## Tables
-É a maneira de tabelas onde a tag `table` recebe um display `table` fazendo com que 
-os elementos internos como `td` e `tr` possam ser usados para montar uma tabela 
+
+É a maneira de tabelas onde a tag `table` recebe um display `table` fazendo com que
+os elementos internos como `td` e `tr` possam ser usados para montar uma tabela
 
 ```html
 <table>
   <tr>
-    <td> Hora </td>
-    <td> 20:00 </td>
+    <td>Hora</td>
+    <td>20:00</td>
   </tr>
   <tr>
-    <td> Hora </td>
-    <td> 22:00 </td>
+    <td>Hora</td>
+    <td>22:00</td>
   </tr>
 </table>
 ```
@@ -150,29 +152,25 @@ os elementos internos como `td` e `tr` possam ser usados para montar uma tabela
 Uso das propriedades `float`, `clear` para que os elementos possam mudar de posição na tela.
 
 ```html
-<div style="float: left">
-  esquerda
-</div>
-<div style="float: right">
-  direita
-</div>
-<div style="clear: both">
-  normal flow
-</div>
+<div style="float: left">esquerda</div>
+<div style="float: right">direita</div>
+<div style="clear: both">normal flow</div>
 ```
 
 ## Flexbox
 
 A caixa se torna flex, fazendo com que os elementos internos possam receber melhor:
- - Alinamento
- - Ordenação
- - Tamanhos flexíveis
+
+- Alinamento
+- Ordenação
+- Tamanhos flexíveis
 
 # Terminologia
 
 - Flex Container
   - Flex item
 - Nesting
+
 ```html
 <div class="container">
   <div class="item">Item</div>
@@ -180,27 +178,29 @@ A caixa se torna flex, fazendo com que os elementos internos possam receber melh
   <div class="item">Item</div>
 </div>
 ```
+
 A partir do momento em que a div container se tornar flex, a div container é o flex container e as divs item são os flex items
 Nesting é quando existe elemento dentro de outro elemento, conforme a estruta acima
 
--Axis  (eixos)
- - main (principal)
-  - start (inicio), end (fim)
- - cross (cruzado)
-  - start (inicio), end (fim)
+-Axis (eixos)
+
+- main (principal)
+- start (inicio), end (fim)
+- cross (cruzado)
+- start (inicio), end (fim)
 
 - Flex sizing
- - flexível
- - altera width/height dos itens para preenchimento dos espaços do flex container
+- flexível
+- altera width/height dos itens para preenchimento dos espaços do flex container
 
 # Propriedades do Flex Container
 
-* Direção dos itens
-* Multi linas
-* Alinhamento
-  * Principal
-  * Cruzado
-* Espaços entre os itens
+- Direção dos itens
+- Multi linas
+- Alinhamento
+  - Principal
+  - Cruzado
+- Espaços entre os itens
 
 # Direção dos itens
 
@@ -209,42 +209,52 @@ Nesting é quando existe elemento dentro de outro elemento, conforme a estruta a
 - valores: (row | row-reverse | column | column-reverse)
 
 # flex-wrap
- - Podemos usar multi linhas
- - Cada nova linha, um novo flex container
+
+- Podemos usar multi linhas
+- Cada nova linha, um novo flex container
 
 # flex-flow
- - shorthand (forma curta de escrever)
- - flex-direction || flex-wrap
+
+- shorthand (forma curta de escrever)
+- flex-direction || flex-wrap
 
 # justfy-content
- - Alinamento dos elementos dentro do container
- - Distribuição dos elementos
+
+- Alinamento dos elementos dentro do container
+- Distribuição dos elementos
+
 ## valores
- - flex-start (padrão)
- - flex-end
- - center
- - space-around
- - space-between
- - space-evenly
+
+- flex-start (padrão)
+- flex-end
+- center
+- space-around
+- space-between
+- space-evenly
 
 # align-items
- - Alinamento dos elementos no eixo cruzado
+
+- Alinamento dos elementos no eixo cruzado
 
 ## valores
-  - stretch
-  - flex-start
-  - flex-end
-  - center
+
+- stretch
+- flex-start
+- flex-end
+- center
 
 # gap
- - Espaços entre os elementos
+
+- Espaços entre os elementos
 
 # valores
+
 Unidades de medida
 fixas: px, pt
 flexíveis: %, em, rem
 
 # Propriedades dos itens
+
 - flex-basis
 - flex-grow
 - flex-shrink
@@ -252,9 +262,26 @@ flexíveis: %, em, rem
 - order
 
 # flex-grow
- - É o crescimento do item dentro do container em relação aos espaços vazios
+
+- É o crescimento do item dentro do container em relação aos espaços vazios
 
 # flex
- - shorthand
- - flex-grow flex-shrink flex-basis
- - podem ter 1, 2, ou 3 valores
+
+- shorthand
+- flex-grow flex-shrink flex-basis
+- podem ter 1, 2, ou 3 valores
+
+## Pilotando com a DOM
+
+# DOM - Document Object Model
+
+- É o HTML convertido para um Objeto JavaScript
+- API que representa a interface com o HTML
+- Estrutura de dados do tipo árvore, criada pelo browser
+- Propriedades e métodos
+
+# Pra que?
+
+- Javascript usa a DOM para se conectar ao HTML
+- Manipular o HTML com Javascript
+- Você só programa pra Web porque existe a DOM
