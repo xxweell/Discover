@@ -285,3 +285,40 @@ flexíveis: %, em, rem
 - Javascript usa a DOM para se conectar ao HTML
 - Manipular o HTML com Javascript
 - Você só programa pra Web porque existe a DOM
+
+---
+
+## Terminal - Sintaxe
+
+# Command
+
+ls -lh /usr/bin
+
+- programa que você está rodando
+- Obrigatório
+
+# Option(s)
+
+- Mudar o comportamento
+- Explicar o comando como deve funcionar
+- geralmente começa com um traço
+- geralmente somente uma letra
+- a maioria dos comandos oferecem muitas opções
+
+# Arguments
+
+- Onde o comando irá operar?
+- Caminho do arquivo ou diretórios
+
+# Dicas e truques - Terminal Hyper
+
+- Atalhos
+  - setinhas
+    - up - down (comandos anteriores e próximos)
+  - Ctrl
+    - setinhas(pula palavras)
+    - A (inicio da linha)
+    - E (final da linha)
+    - U (limpa a linha)
+    - K (remove do cursor até o final da linha)
+    - L (clear)
