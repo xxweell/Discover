@@ -6,12 +6,12 @@ app.set('view engine', 'ejs') // fala pro express que a ferramenta que sera util
 // criando a rota principal que vai renderizar o index.ejs
 // quando for chamada, a resposta vai ser a renderização do index.ejs
 app.get('/', (req, res) => {
-  res.render('index.ejs')
+  res.render('pages/index.ejs')
 })
 
 // rota para o about do site
 app.get('/sobre', (req, res) => {
-  res.render('about.ejs')
+  res.render('pages/about.ejs')
 })
 
 app.listen(8080) // listen é o método que fica ouvindo. Quando a porta 8080 for chamada, o servidor será rodado

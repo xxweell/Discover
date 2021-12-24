@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <%- include('head') %>
+    <%- include('../partials/head') %>
 <body class="container">
-    <%- include('header') %>
+    <%- include('../partials/header', {pagina: 'Sobre'}); %>
     <main>
         <div class="jumbotron">
             <h1>Sobre mim</h1>
             <p>Olá! Sou Wellington Nogueira, aluno de programação front-end. Atualmente estudando na escola Rocketseat.</p>
         </div>
     </main>
-    <%- include('footer') %>
+    <%- include('../partials/footer') %>
 </body>
 </html>
