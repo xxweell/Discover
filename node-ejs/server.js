@@ -6,7 +6,39 @@ app.set('view engine', 'ejs') // fala pro express que a ferramenta que sera util
 // criando a rota principal que vai renderizar o index.ejs
 // quando for chamada, a resposta vai ser a renderização do index.ejs
 app.get('/', (req, res) => {
-  res.render('pages/index.ejs')
+  const items = [
+    {
+      title: 'D',
+      message: 'esenvolver aplicações/serviços de forma fácil.'
+    },
+    {
+      title: 'E',
+      message: 'JS usa JavaScript para renderizar HTML.'
+    },
+    {
+      title: 'M',
+      message: 'uito fácil de usar.'
+    },
+    {
+      title: 'A',
+      message: 'morzinho.'
+    },
+    {
+      title: 'I',
+      message: 'nstall ejs.'
+    },
+    {
+      title: 'S',
+      message: 'intaxe simples.'
+    }
+  ]
+
+  const subtitle =
+    'Uma linguagem de modelagem para criação de páginas HTML utilizando JS'
+  res.render('pages/index.ejs', {
+    qualitys: items, // passando o objeto qualitys para o pages/index.ejs
+    subtitle: subtitle
+  })
 })
 
 // rota para o about do site
